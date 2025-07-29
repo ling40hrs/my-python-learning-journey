@@ -1,1 +1,1 @@
-print("x is 1")
+s # type: ignore
