@@ -1,21 +1,24 @@
-username = "Ling"
-password = "LingLing123"
+"""
+This script provides a simple command-line login system
+and then proceeds to a basic text-based adventure scenario.
+"""
+
+USERNAME = "Ling"
+PASSWORD = "LingLing123"
 while True:
     un_input = input("Enter username: ")
     pw_input = input("Enter password: ")
-    un_chck = un_input == username
-    pw_chck = pw_input == password
+    un_chck = un_input == USERNAME
+    pw_chck = pw_input == PASSWORD
 
 
     if [un_input, pw_input] == ["Admin", "12345"]:
-        login_status = True
         print("Admin login.")
         break
 
     elif un_chck:
         if pw_chck:
             print("Login successful.")
-            login_status = True
             break
         else:
             print("Incorrect password.")
@@ -50,9 +53,10 @@ One is a large 'wooden' door. The other is a 'stone' door.""")
         print("---*---" * 6)
 
 while stone == 1:
-    sneak = input("A monster is sleeping. How many steps do you take to sneak past it? (Enter a number): > ")
+    sneak = input("A monster is sleeping. How many steps do " \
+"you take to sneak past it? (Enter a number): > ")
     if int(sneak) <= sneak_threshold:
         print("You sneak past successfully! You win!")
         break
     elif int(sneak) > sneak_threshold:
-            print("You took too much steps leading to the monster detecting you. Try again!.")
+        print("You took too much steps leading to the monster detecting you. Try again!")
