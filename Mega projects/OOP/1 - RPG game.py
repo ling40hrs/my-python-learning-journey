@@ -1,3 +1,5 @@
+#It got so complex that I have to archive this. I was tasked to build a helicopter and I tried to build a rocket lmao.
+#Didn't finish this one but it made me learn OOP basics.
 
 import random
 print("--- Character Creation ---")
