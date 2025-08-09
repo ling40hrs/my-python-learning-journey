@@ -33,7 +33,7 @@ class BankAccount:
 
         for x, y  in bank_accounts.items():
             if y == self.recipient and not self.recipient == self.name:                
-                print(f"""Alice transfers ${self.transfer_ammount} to Bob...
+                print(f"""{self.name} transfers ${self.transfer_ammount} to {self.recipient}...
 Transferred ${self.transfer_ammount} to {self.recipient}.""")
                 x.silent_deposit(self.transfer_ammount)
                 self.balance -= self.transfer_ammount
