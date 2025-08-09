@@ -8,14 +8,6 @@ My goal is to immediately apply what I learn to solidify my understanding and bu
 
 ---
 
-## 📚 Projects Included
-
-Here's a list of the current mini-projects in this repository:
-
-*   **`1 - Story with login/`**: This project explores basic user authentication concepts, likely involving input, conditionals, and simple user verification. 
-
----
-
 ## 🚀 How to Run These Projects
 
 Each mini-project is designed to be self-contained within its own folder.
