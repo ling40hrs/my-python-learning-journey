@@ -87,11 +87,11 @@ class Inventory:
         self.available_slots = self.max_per_slots
         self.items = []
     def add(self):
-        
+        pass
 
-    class Armor_slots:
-        def __init__(self):
-            self.arm_slots = 4
+class Armor_slots:
+    def __init__(self):
+        self.arm_slots = 4
 
     def __str__(self):
         return f"""Available slots {self.available_slots}/{self.slots}"""
@@ -146,5 +146,3 @@ while player.is_alive():
         input("Press any key to go back > ")
     elif choice == 2:
         game_enemies[random_index].boss_attack()
-
-
