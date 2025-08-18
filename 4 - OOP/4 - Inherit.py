@@ -1,3 +1,7 @@
+'''
+Basic 1v1 simulation, bias towards hero.
+'''
+
 import random
 
 class Character:
