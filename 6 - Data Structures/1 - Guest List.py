@@ -34,21 +34,37 @@ while True:
         for i, names in enumerate(guest_init,1):
             print(f"{i}. {names}")
         
-        guest_pop_input = input("Enter the number of whom you want to remove n,n: ").strip()
-        try:
-            guest_remove_list = sorted(map(int,guest_pop_input.split(",")),reverse=True)
+        guest_pop_input = input("Enter the number of whom you want to remove n,n: ").strip().split(",")
+        guest_pop_final = []
+        guest_removed = []
 
-            for i in guest_remove_list:
-                if 1 <= i <= len(guest_init):
-                    try:
-                        x = int(i) - 1
-                        del guest_init[x]
-                    except:
-                        print(f"{i} is invalid. (Try/except block)")
+        #validate first before removing
+        
+        for i in guest_pop_input:
+            try:
+                x = int(i) #convert to integer
+                if 1 <= x <= len(guest_init): #checks if number provided is not less than 1 and not more than the guest count
+                    if x not in guest_pop_final: #checks if duplicate
+                        guest_pop_final.append(x)
+                    else:
+                        raise ValueError
                 else:
-                    print(f"{i} is invalid. (If block)")
-        except ValueError:
-            print("ValueError")
+                    raise ValueError
+            except ValueError:
+                print(f"{i} is not an integer/does not exist/a duplicate. It will be ignored.")
+        
+        guest_pop_final.sort(reverse=True)
+
+        #mutation phase after validation
+
+        for i in guest_pop_final:
+             x = guest_init.pop(i-1)
+             guest_removed.append(x)
+        
+        for i in guest_removed: #feedback
+            print(f"{i} got removed from the list.")
+        #can use print(f"\nSuccessfully removed: {', '.join(guest_removed)}\n") instead, but im too lazy to learn it for this specific case rn
+
 
     elif user_input == "4":
         sys.exit()
