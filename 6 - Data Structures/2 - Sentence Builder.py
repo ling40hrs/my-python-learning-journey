@@ -1,4 +1,5 @@
 '''
+List
 Uses .join method
 '''
 
@@ -27,7 +28,6 @@ Your sentence so far: {
         input_word = input("Enter a word: > ")
         raw_sentence.append(input_word.strip())
         loop = True
-
 
     elif user_input == "2":
         if raw_sentence:
