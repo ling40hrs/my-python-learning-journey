@@ -35,21 +35,33 @@ while True:
 
         while not is_present:   #validate first
             change_key_input = input("What do you want to change? > ")
-            for x in character:
-                if change_key_input == x:
-                    is_present = True
-                    break
-            if not is_present:
+            
+            if change_key_input in character:
+                is_present = True
+            else:
                 print("Invalid input. Case sensitive")
 
-        change_value_input = input("To? > ")
-        character[change_key_input.strip()] = change_value_input.strip()
+        while True: #validate if original value is integer, then input must be integer asw
+            change_value_input = input("To? > ")
+
+            if isinstance(character.get(change_key_input),int):
+                try:
+                    character[change_key_input.strip()] = int(change_value_input.strip())
+                    break
+                except ValueError:
+                    print("Must be an integer!")
+            else:
+                character[change_key_input.strip()] = change_value_input.strip()
+
         view_stats()
 
     elif user_input == "3":
         add_key_input = get_nonempty("What do you want to add? > ")
         add_value_input = get_nonempty("Value > ")
-        character[add_key_input] = add_value_input 
+        try:
+            character[add_key_input] = int(add_value_input)
+        except ValueError:
+            character[add_key_input] = add_value_input
         view_stats()
 
     elif user_input == "4":
