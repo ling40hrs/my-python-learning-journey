@@ -1,6 +1,7 @@
 '''
 List
-Uses .join method
+Uses .join method,
+if/else expression inside f string
 '''
 
 raw_sentence = []
