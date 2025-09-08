@@ -14,11 +14,11 @@ Each mini-project is designed to be self-contained within its own folder.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/ling40hrs/python-beginner-projects.git
+    git clone https://github.com/ling40hrs/my-python-learning-journey.git
     ```
 2.  **Navigate to a project folder:**
     ```bash
-    cd python-beginner-projects/1-Story-with-login
+    cd my-python-learning-journey/1-Story-with-login
     # Or cd into any other project folder you want to run
     ```
 3.  **Run the Python script:**
